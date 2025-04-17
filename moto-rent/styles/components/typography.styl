@@ -1,0 +1,84 @@
+@import '@/styles/mixins/with-margin';
+
+body {
+  font-family: 'Plus Jakarta Sans', Sans-serif;
+}
+
+h1, .h1 {
+  font-size: var(--font-size--h1);
+  line-height: 1.5;
+  font-weight: 800;
+  letter-spacing: -2.16px;
+  @media (max-width 768px) {
+    font-size: 56px
+  }
+}
+
+h2, .h2 {
+  font-size: var(--font-size--h2);
+  font-weight: 600;
+  line-height: 1.28;
+  letter-spacing: -1.2px;
+}
+
+h3, .h3 {
+  font-size: var(--font-size--h3);
+  line-height: 1.2
+}
+
+h4, .h4 {
+  font-size: var(--font-size--h4);
+}
+
+h5, .h5 {
+  font-size: var(--font-size--h5);
+}
+
+h6, .h6 {
+  font-size: var(--font-size--lg);
+}
+
+.title {
+  color: var(--color-dark);
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 150%;
+  letter-spacing: -0.4px;
+}
+
+// lists
+
+ol, ul {
+  with-margin();
+  padding-left: 20px;
+  line-height: 1.25;
+}
+
+// links
+
+a {
+  color: red;
+  transition: color var(--time--transition-link);
+
+  &:hover {
+    color: darkred;
+  }
+}
+
+// other
+
+p {
+  margin-bottom: 16px
+  line-height: 1.5;
+  &[class^="text-lg"]{
+    font-size: var(--font-size--lg);
+  }
+}
+
+em {
+  font-style: italic;
+}
+
+strong {
+  font-weight: bold;
+}

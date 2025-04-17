@@ -1,0 +1,46 @@
+.pagination {
+  margin-top: 24px
+  gap 4px
+  display: flex;
+  align-items: center;
+  --bs-pagination-disabled-bg: transparent
+  --bs-pagination-active-bg: transparent
+  --bs-pagination-focus-bg: transparent
+  --bs-pagination-hover-bg: transparent
+  --bs-pagination-bg: transparent
+  --bs-pagination-active-color: var(--color-graphite-blue)
+  --bs-pagination-color: var(--color-black)
+  --bs-pagination-focus-color: var(--color-graphite)
+  --bs-pagination-hover-color: var(--color-graphite)
+
+  .page-item {
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    .page-link {
+      border none
+      padding: 0 6px
+      font-size 20px
+      font-weight: 600
+      transition all ease 0.4s
+      display: flex;
+      align-items: center;
+
+      &:focus {
+        box-shadow unset
+      }
+
+      .icon {
+        width: 14px
+        height: 14px
+      }
+    }
+
+    &.active {
+      .page-link {
+        font-size 24px
+      }
+    }
+  }
+}

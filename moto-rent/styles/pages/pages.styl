@@ -1,0 +1,385 @@
+[class*="-page"]:not(.home-page) {
+  [class^="section"] {
+    &:first-of-type {
+      padding-top: 80px
+    }
+  }
+}
+
+.home-page, .blog-page {
+  .section_top-banner {
+    @media (max-width $md) {
+      overflow-x hidden
+    }
+  }
+
+  .navbar {
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    z-index: 100;
+  }
+
+  .navbar_main {
+    @media (max-width $lg) {
+      display: none
+    }
+  }
+}
+
+.blog-page {
+  .section_top-banner {
+    padding-top: 0 !important
+    background: var(--color-grey-light) url("../../images/top-banner_blog.jpg") no-repeat center 20%
+    background-size: cover
+    @supports (content-visibility: auto) {
+      background: url("../../images/top-banner_blog.webp") no-repeat;
+    }
+  }
+}
+
+.faq-page {
+  background-color: var(--color-grey-light)
+}
+
+.who-we-are-page {
+  .section {
+    &-who-we-are {
+      p {
+        color: var(--color-black--primary);
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 182%;
+      }
+
+      .img-wrap {
+        .card-img-top {
+        }
+      }
+    }
+
+    &_banner {
+      p {
+        color: var(--color-grey-light);
+        font-size: 24px;
+        font-weight: 700;
+      }
+
+
+      .wrap {
+        @supports (content-visibility: auto) {
+          background: url("../../images/banner-who-we-are.webp") no-repeat;
+        }
+        background: url("../../images/banner-who-we-are.png") no-repeat;
+      }
+    }
+
+    &_social-media {
+      padding: 80px 0
+
+      .content {
+        display: flex
+        flex-direction column
+
+        p {
+          color: var(--color-black);
+          font-size: 24px;
+          font-weight: 600;
+          line-height: 130%;
+          margin-bottom: 30px
+        }
+      }
+    }
+  }
+}
+
+
+.list-your-bike-page {
+  .section {
+    &-who-we-are {
+      p {
+        color: var(--color-black--primary);
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 182%;
+      }
+
+
+      .content-box {
+        &:nth-child(2n) {
+          .img-wrap {
+            float: left;
+            padding-left:unset;
+            padding-right: 60px
+            @media (max-width: 1200px) {
+              padding-right:unset;
+            }
+          }
+        }
+        .img-wrap {
+          float: right;
+          width:calc(50% + 48px);
+          padding-left:60px;
+          padding-bottom: 24px;
+          @media (max-width: 1200px) {
+            width: 100%;
+            float unset;
+            padding-left:unset;
+            margin-bottom: 32px;
+          }
+        }
+        &::after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+      }
+    }
+  }
+}
+
+
+.contact-us-page {
+  .contact-form-wrapper {
+    padding: 70px 40px 60px
+    background-color: var(--color-white)
+    border-radius 10px
+
+  }
+  @media (min-width: $xl) {
+    .col-xl-4 {
+      flex: 0 0 auto;
+      width: 41.66666667%;
+    }
+  }
+}
+
+.authorization-page {
+  .section_authorization {
+    min-height: 100vh;
+    padding-top: 0 !important
+    display: flex
+    align-items center
+    position relative
+
+    &:before {
+      content ""
+      position absolute
+      top: 0
+      bottom: 0
+      left: 0
+      width: 50%
+      background: url("../../images/login-banner.png") no-repeat top
+      background-size: cover
+      @supports (content-visibility: auto) {
+        background: url("../../images/login-banner.webp") no-repeat top
+        background-size: cover
+      }
+
+
+    }
+    @media (max-width $lg) {
+      &:before {
+        content unset
+      }
+    }
+
+    .content {
+      display: flex;
+      justify-content: center;
+      width: 100%
+      max-width 560px
+
+
+      form {
+        min-width: 80%;
+        @media (max-width $lg){
+          width:100%
+        }
+      }
+
+      .form-pass {
+        position: relative;
+
+        .show-pass {
+          position absolute;
+          right: 16px
+          bottom: 16px
+          cursor pointer
+
+          .icon {
+            width: 24px
+            height: 24px
+          }
+
+          &.is-invalid {
+            right: 30px;
+            bottom: 48px;
+
+            @media (max-width 438px){
+              bottom: 60px;
+            }
+          }
+        }
+      }
+    }
+
+    .modal {
+      display: block;
+      visibility: hidden;
+      &.fade {
+        background-color: rgba(0,0,0,0.4);
+      }
+      &.show {
+        visibility: visible;
+      }
+
+      .modal-header {
+        justify-content: flex-end;
+      }
+    }
+    .content-reset-pass {
+      form {
+        width: 80%;
+      }
+    }
+  }
+}
+#myAccountApp {
+  background-color: var(--color-grey-light)
+  &-content {
+    background-color: var(--color-white)
+  }
+
+  .filter {
+    &-wrap {
+      display: flex
+      flex-wrap wrap
+      row-gap 16px
+      column-gap 20px
+    }
+
+    &-badge {
+      position relative
+      display: flex
+      align-items center
+      color: var(--color-black);
+      font-weight: 300;
+      letter-spacing: -0.48px;
+      padding: 10px 30px
+      border-radius: 40px;
+      border: 1px solid transparent;
+
+      background: var(--color-white);
+
+      .icon {
+        width: 0
+        height: 24px
+        transition all ease .5s
+        cursor pointer
+      }
+
+      .checked {
+        position absolute
+        top: 0
+        right: 0
+        bottom: 0
+        left: 0
+        cursor pointer
+      }
+
+      &.active {
+        border-color var(--color-yellow)
+
+        .icon {
+          margin-left: 10px
+          margin-right: -10px
+          width: 24px
+        }
+
+        .checked {
+          position absolute
+          top: 0
+          right: 0
+          bottom: 0
+          left: 100%
+        }
+      }
+    }
+  }
+}
+
+.error-page {
+  display: flex
+  min-height: 100vh
+
+  main {
+    flex 1 0 auto
+    justify-content: center;
+    align-items center
+    display: flex
+    max-width: 100%;
+  }
+
+  .error {
+    &-content {
+      display: flex
+      flex-direction column
+      align-items center
+      row-gap 24px
+    }
+    &-code {
+      font-size: 136px
+      color: #3B7DA1
+      font-weight: 900
+      opacity: 0.2;
+      letter-spacing 0.064em
+
+      @media (min-width 568px) {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size:260px
+        opacity: 0.1;
+      }
+
+      @media (min-width 768px) {
+        font-size:310px
+      }
+    }
+    &-text {
+      font-size: 40px;
+      font-weight: 600;
+      line-height: 1.3;
+      display: flex
+      text-align center
+      @media (max-width $sm) {
+        font-size: 24px;
+      }
+    }
+  }
+}
+
+.vehicle-rent-page {
+  .section_contact-us {
+    background-color: var(--color-white)
+  }
+}
+ .vehicle-payment-page {
+   .payment-header {
+     display: flex
+     justify-content: center;
+     flex-direction column
+     align-items center
+     margin-bottom: 70px
+     .payment-icon {
+       margin-bottom: 14px
+     }
+   }
+ }

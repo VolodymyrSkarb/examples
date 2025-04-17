@@ -1,0 +1,165 @@
+.card {
+  border none
+  border-radius 10px
+
+  &-img-wrap {
+    max-height 220px
+  }
+  &-img-top {
+    --bs-card-inner-border-radius : 10px
+    object-fit: cover;
+    object-position: center;
+    height: 100%;
+    width: 100%;
+  }
+
+  &-body {
+    padding: 10px 16px 20px
+  }
+
+  &-footer {
+    position relative
+    padding: 24px 16px 32px
+    background-color: unset
+    border none
+
+    &:before {
+      content ""
+      position absolute
+      top: 0
+      right: 12px
+      left: 12px
+      height: 1px
+      background-color: var(--color-grey-light-blue)
+    }
+  }
+
+  &-title {
+    color: var(--color-black--secondary);
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: -0.4px;
+    margin-bottom: 10px
+  }
+
+  &_vehicle-rent-form {
+    background: var(--color-grey-light);
+    padding: 60px 60px 50px;
+    border-radius 10px
+    margin-bottom: 100px
+    @media (max-width $md) {
+      padding: 36px 24px
+    }
+
+    .calendar-main {
+      .dp__input_wrap {
+        .dp__clear_icon {
+          left: 78%;
+        }
+      }
+    }
+  }
+
+  &-vehicle-info {
+    @extend .card_vehicle-rent-form;
+    color: #222;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+    p {
+      margin-bottom: 20px
+    }
+    & > .row {
+      position relative
+      &:before {
+        content ""
+        position: absolute;
+        top: -26px
+        bottom: 0
+        left:50%
+        width:1px
+        display: flex
+        background-color: var(--color-grey)
+      }
+
+      @media (max-width $lg){
+        &:before {
+          content unset
+        }
+      }
+    }
+    .total-box {
+        position: relative;
+        padding-top: 16px
+        &:before {
+          content ""
+          position: absolute;
+          top: 0
+          bottom: 0
+          left:0
+          right: 0
+          height: 1px
+          display: flex
+          background-color: var(--color-grey)
+        }
+      }
+  }
+  &-payment {
+    @extend .card_vehicle-rent-form;
+    .content-row {
+      display: flex
+      align-items center
+      color: var(--color-dark);
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 1.5;
+      letter-spacing: -0.48px;
+      margin-bottom: 40px
+
+      @media (max-width $sm) {
+        display: flex
+        flex-direction column
+      }
+
+      *{
+        min-width: 50%;
+        margin-bottom: 0;
+        text-align: center;
+        @media (max-width $sm) {
+          display: flex
+          min-width 100%
+          flex-direction column
+        }
+      }
+    }
+  }
+  &-vehicle {
+    .img-wrap {
+      height 200px
+    }
+  }
+  &-temp-vehicle {
+    height: 100%
+    .img-wrap {
+      min-height 196px
+    }
+    .card-body,.card-footer{
+      .content {
+        height: 100%
+        display: flex
+        justify-content center
+        flex-direction: column;
+        align-items: baseline;
+      }
+    }
+  }
+}
+
+.row-card {
+  row-gap 24px
+}
+
+.hide {
+  visibility hidden;
+  position absolute;
+}

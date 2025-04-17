@@ -1,0 +1,98 @@
+.list-card {
+  display: flex
+  flex-direction column
+  border-radius: 10px;
+  margin-bottom: 40px
+
+  .list-item {
+    display: grid
+    align-items center
+    grid-template-columns 60% 40%
+    background: var(--color-white);
+    padding: 28px 30px
+    margin-bottom: 8px
+
+    @media (max-width $md) {
+      flex-direction: column;
+      display: flex;
+      align-items: baseline;
+      & > div {
+        width:100%
+        &:first-child {
+          margin-bottom: 12px
+        }
+      }
+    }
+
+    &.user-info {
+      grid-template-columns 30% 30% 40%
+    }
+
+    .content {
+      display: flex
+      flex-direction column
+
+      .name {
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 21px;
+        color: var(--color-graphite-blue)
+
+        &-moto {
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 24px;
+          color: unset
+          margin-bottom: 4px
+        }
+      }
+
+      .price, .email {
+        font-weight: 500;
+
+        .days {
+          margin-right: 7px
+        }
+      }
+    }
+
+    .actions {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      justify-items: center;
+
+      > :first-child {
+          justify-self: start;
+      }
+
+      > :last-child {
+          justify-self: end;
+      }
+      .date {
+        line-height: 21px
+        font-weight: 600;
+        color: var(--color-graphite-blue)
+      }
+      .status {
+        margin: 0 12px
+        text-transform capitalize
+        color: #4DA92D
+        font-weight: 500;
+        &.draft, &.pending {
+          color: #FFA22E
+        }
+        &.paid {
+          color: #2465E3
+        }
+        &.failed {
+          color: #E32431
+        }
+        &.refund {
+          color: #596780
+        }
+      }
+    }
+  }
+}
