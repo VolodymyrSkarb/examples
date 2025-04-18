@@ -1,0 +1,113 @@
+.bread-crumbs {
+  display: flex;
+
+  p {
+    margin: 0;
+  }
+}
+
+.actions-wrapper {
+  .change-panel-select {
+    .MuiFormControl-root {
+      margin-left: 0;
+    }
+  }
+}
+
+.task-wrapper {
+  display: flex;
+
+  .task-info {
+    width: 70%;
+
+    .width-content {
+      display: inline-block;
+      width: auto !important;
+      cursor: pointer;
+    }
+
+    .task-title {
+      width: 25%;
+
+      .task-name {
+        font-size: 24px;
+        font-weight: 500;
+        margin-bottom: 10px;
+      }
+    }
+
+    .task-description {
+      border-top: 1px solid;
+      margin-top: 10px;
+
+      .title-description-container {
+        font-size: 19px;
+        font-weight: 500;
+      }
+
+      .width-content {
+        p {
+          margin: 0 !important;
+        }
+      }
+    }
+
+    .task-title-form {
+      margin-top: 24px;
+
+      .modal-name {
+        margin-bottom: 10px !important;
+      }
+
+    }
+
+    .action-buttons {
+      display: flex;
+      justify-content: flex-end;
+
+      .buttons_confirm {
+        margin-right: 5px;
+      }
+    }
+
+    .task-description-form {
+      //width: 25%;
+      margin-top: 16px;
+    }
+  }
+
+  .additional-info-wrapper {
+    margin: 24px 0 0 20px;
+
+    .task-additional-info {
+      .date-container, .people-container {
+        border-top: 1px solid black;
+        margin: 10px 0;
+
+        .title-container {
+          margin: 5px 0;
+          font-size: 19px;
+          font-weight: 500;
+        }
+
+        .category-name {
+          margin-right: 5px;
+        }
+
+        .created-date, .updated-date, .category {
+          display: flex;
+          margin: 0 0 5px 5px;
+        }
+
+        .MuiFormControl-root {
+          margin: 0 !important;
+
+          .MuiSelect-select {
+            padding-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}
+

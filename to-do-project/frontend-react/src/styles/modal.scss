@@ -1,0 +1,67 @@
+.modal-wrapper {
+  display: none;
+}
+
+.modal {
+
+  .MuiFormControl-root {
+    width: 100%;
+  }
+
+  &-title {
+    font-weight: 500;
+    font-size: 24px;
+    margin: 10px 0;
+  }
+
+  &-name {
+    margin-bottom: 20px !important;
+
+    .MuiInputBase-root {
+      border-radius: 0.5em;
+    }
+  }
+
+  &-description {
+    .ql-container {
+      min-height: 10em;
+      border-bottom-left-radius: 0.5em;
+      border-bottom-right-radius: 0.5em;
+    }
+
+    .ql-toolbar {
+      background: #fefcfc;
+      border-top-left-radius: 0.5em;
+      border-top-right-radius: 0.5em;
+      border-bottom: none;
+    }
+  }
+
+  .error {
+    .modal-description {
+      .ql-container {
+        border-color: red;
+      }
+
+      .ql-toolbar {
+        border-color: red;
+      }
+    }
+  }
+
+  &-buttons {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+
+    &_confirm {
+      margin-right: 5px !important;
+    }
+  }
+
+  &-confirm-message {
+    font-size: 1rem;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.6);
+  }
+}

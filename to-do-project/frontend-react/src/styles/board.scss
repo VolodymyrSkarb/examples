@@ -1,0 +1,164 @@
+.board {
+  //background-color: #F9F8F8;
+  //min-height: 100vh;
+  //min-width: calc(100vw - 288px);
+  display: inline-flex;
+
+  &.empty {
+    width: 85vw;
+    height: 70vh;
+    border: 2px dashed #b6b6b6;
+    border-radius: 10px;
+    margin-top: 10px;
+    align-items: center;
+    justify-content: center;
+
+    .empty-message {
+      color: #B6B6B6;
+      font-weight: 500;
+      text-transform: uppercase;
+    }
+  }
+
+  &_panel {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+
+    &__info {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    &__title {
+      display: flex;
+      -webkit-box-align: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      justify-content: flex-start;
+      //border-top-left-radius: 2px;
+      //border-top-right-radius: 2px;
+      //background-color: rgb(235, 236, 240);
+      transition: background-color 0.2s ease 0s;
+
+      &__name {
+        font-weight: 500;
+        font-size: 19px;
+        margin-right: 8px;
+      }
+
+      &__count {
+        color: #B6B6B6;
+        font-weight: 400;
+        font-size: 16px;
+      }
+    }
+
+    &__menu {
+      button {
+        color: #B6B6B6;
+      }
+    }
+
+    &__content {
+      //background-color: rgb(235, 236, 240);
+      display: flex;
+      flex-direction: column;
+      opacity: inherit;
+      //padding: 8px 8px 0px;
+      border: 8px;
+      transition: background-color 0.2s ease 0s, opacity 0.1s ease 0s;
+      user-select: none;
+      width: 350px;
+    }
+
+    &__dialog {
+      display: none;
+    }
+  }
+
+  .task {
+    border-radius: 10px;
+    border: 2px solid transparent;
+    background-color: rgb(255, 255, 255);
+    box-shadow: none;
+    box-sizing: border-box;
+    padding: 20px;
+    min-height: 200px;
+    margin-bottom: 20px;
+    user-select: none;
+    color: rgb(9, 30, 66);
+    //display: flex;
+
+    &-title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 500;
+      font-size: 19px;
+
+      &-name {
+        .task-link {
+          color: #000000;
+          text-decoration: none;
+        }
+      }
+
+      &-menu {
+        button {
+          color: #B6B6B6;
+        }
+      }
+    }
+
+    &-description {
+      font-weight: 400;
+      font-size: 14px;
+      color: #B6B6B6;
+    }
+  }
+}
+
+.task-link {
+  color: #000000;
+  text-decoration: none;
+}
+
+.button-back {
+  padding: 7px 7px !important;
+  border-radius: 10px !important;
+  background-color: #6C5DD3 !important;
+}
+
+.actions-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+
+  .add-panel-button {
+    padding: 5px 5px;
+    min-width: 0;
+    border-radius: 10px;
+    background-color: #6C5DD3 !important;;
+
+    .MuiButton-startIcon {
+      margin: 0;
+
+      .MuiSvgIcon-root {
+        font-size: 28px;
+      }
+    }
+  }
+
+  .info {
+    display: flex;
+    align-items: center;
+
+    .project-name {
+      font-size: 22px;
+      font-weight: 700;
+      margin: 0 0 0 15px;
+    }
+  }
+}

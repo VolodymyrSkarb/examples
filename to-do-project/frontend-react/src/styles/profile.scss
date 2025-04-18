@@ -1,0 +1,68 @@
+.container-info {
+  .avatar-container {
+    position: relative;
+    width: 200px;
+    margin-bottom: 15px;
+
+    .avatar {
+      height: 200px;
+      cursor: pointer;
+
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+    .MuiSvgIcon-root {
+      position: absolute;
+      top: 42%;
+      left: 42%;
+      pointer-events: none;
+      font-size: 2rem;
+      color: #969696;
+    }
+  }
+
+
+
+  .user-info {
+    margin-bottom: 20px;
+
+    .user-info_title {
+      font-size: 19px;
+      font-weight: 500;
+    }
+
+    .user-info_text {
+      display: inline-block;
+      width: auto;
+      cursor: pointer;
+      font-size: 16px;
+      margin: 0;
+    }
+
+    .MuiFormControl-root {
+      .MuiFormControl-root {
+        margin-bottom: 10px !important;
+      }
+
+      .action-buttons {
+        display: flex;
+        justify-content: flex-end;
+
+        button {
+          margin-left: 5px;
+        }
+      }
+    }
+  }
+}
+
+.avatar-editor {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  .MuiButtonBase-root {
+    margin-top: 10px;
+  }
+}
