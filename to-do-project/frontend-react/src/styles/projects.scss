@@ -1,0 +1,19 @@
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+
+  .project-item-card {
+    margin: 5px;
+
+    .MuiPaper-root {
+      .MuiCardContent-root {
+        display: flex;
+        justify-content: space-between;
+
+        .project-info {
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+}

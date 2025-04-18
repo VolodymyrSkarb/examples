@@ -1,0 +1,12 @@
+{
+  "extends": [
+    "react-app",
+    "react-app/jest"
+  ],
+  "rules": {
+    "semi": ["error", "always"],
+    "space-before-blocks": ["error", "always"],
+    "newline-before-return": ["error"],
+    "newline-per-chained-call": ["error", { "ignoreChainWithDepth": 1 }]
+  }
+}
